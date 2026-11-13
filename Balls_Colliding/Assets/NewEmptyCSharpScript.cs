@@ -36,4 +36,12 @@ public class BallController : MonoBehaviour
             Debug.Log("The balls collided!");
         }
     }
+
+        void OnTriggerEnter(Collider other) 
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }
